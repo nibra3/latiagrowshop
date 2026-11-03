@@ -415,12 +415,13 @@ section { padding: 7rem 0; }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1.5px;
     background: rgba(114,39,132,0.2);
 }
 
 .product-card {
+    grid-column: span 2;
     background: var(--gray);
     text-decoration: none;
     display: flex;
@@ -430,6 +431,9 @@ section { padding: 7rem 0; }
     overflow: hidden;
 }
 .product-card:hover { background: var(--gray-mid); }
+
+/* 5 productos en 3 columnas: la última fila (2 tarjetas) queda centrada */
+.product-card:nth-child(4):nth-last-child(2) { grid-column: 2 / 4; }
 
 .product-img {
     aspect-ratio: 1 / 1;
@@ -442,12 +446,21 @@ section { padding: 7rem 0; }
     overflow: hidden;
 }
 
-.product-img::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(114,39,132,0.3), transparent);
+/* Foto de producto: fondo blanco, la imagen entra completa */
+.product-img:has(img) { background: #fff; }
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
 }
+
+/* Foto que ocupa todo el cuadro (ej: la flor de OG Kush) */
+.product-img--cover img { object-fit: cover; }
+
+.product-card:hover .product-img img { transform: scale(1.04); }
 
 .product-badge {
     position: absolute;
@@ -516,66 +529,6 @@ section { padding: 7rem 0; }
 }
 .product-btn:hover { background: var(--yellow-soft); }
 
-/* ── BRAND STRIP ── */
-.brand-strip {
-    background: var(--purple);
-    padding: 5rem 0;
-}
-
-.brand-strip .container {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-
-.brand-text { flex: 1; }
-
-.brand-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    line-height: 1;
-    color: var(--yellow);
-    margin-bottom: 1.2rem;
-}
-
-.brand-body {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.75);
-    max-width: 480px;
-}
-
-.brand-stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 2.5rem;
-}
-
-.brand-stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    color: var(--yellow);
-    line-height: 1;
-}
-
-.brand-stat-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin-top: 0.3rem;
-}
-
-.brand-logo-wrap {
-    flex-shrink: 0;
-}
-
-.brand-logo-wrap svg {
-    width: 260px;
-    height: 260px;
-    opacity: 0.95;
-}
-
 /* ── SERVICES ── */
 #servicios {
     background: var(--gray);
@@ -600,7 +553,7 @@ section { padding: 7rem 0; }
 .service-number {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
-    color: rgba(114,39,132,0.3);
+    color: var(--purple); /* rgb(114 39 132) */
     line-height: 1;
     flex-shrink: 0;
 }
@@ -619,45 +572,6 @@ section { padding: 7rem 0; }
     font-size: 0.85rem;
     line-height: 1.75;
     color: rgba(255,255,255,0.5);
-}
-
-/* ── TESTIMONIALS ── */
-#testimonios {
-    background: var(--black);
-}
-
-.testi-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5px;
-    background: rgba(114,39,132,0.2);
-}
-
-.testi-item {
-    background: var(--gray);
-    padding: 2.5rem;
-}
-
-.testi-stars {
-    color: var(--yellow);
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.2rem;
-}
-
-.testi-text {
-    font-size: 0.9rem;
-    line-height: 1.75;
-    color: rgba(255,255,255,0.7);
-    font-style: italic;
-    margin-bottom: 1.5rem;
-}
-
-.testi-author {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-    color: var(--yellow);
 }
 
 /* ── CONTACT ── */
@@ -825,10 +739,10 @@ footer {
     nav { display: none; }
     .cat-grid { grid-template-columns: repeat(2, 1fr); }
     .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-card,
+    .product-card:nth-child(4):nth-last-child(2) { grid-column: auto; }
     .services-grid { grid-template-columns: 1fr; }
-    .testi-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .brand-strip .container { flex-direction: column; gap: 3rem; }
     footer { flex-direction: column; gap: 1.5rem; text-align: center; }
 }
 @media (max-width: 600px) {
@@ -840,6 +754,8 @@ footer {
     .hero-actions a { text-align: center; padding: 1rem 1.5rem; }
     .products-grid { grid-template-columns: 1fr; }
     .logo-sub { display: none; }
+    .logo-main { font-size: 1.15rem; white-space: nowrap; }
+    .header-cta { padding-left: 1rem; padding-right: 1rem; }
     header { padding: 0 1.25rem; }
     footer { padding-left: 1.25rem; padding-right: 1.25rem; }
     .footer-links { flex-wrap: wrap; justify-content: center; gap: 0.8rem 1.5rem; }
@@ -850,13 +766,148 @@ footer {
 }
 
 /* ── EXTRAS (antes eran estilos inline) ── */
-.brand-logo {
-    width: 260px;
-    height: 260px;
-    object-fit: contain;
-}
-
 .contact-link {
     color: var(--yellow);
     text-decoration: none;
+}
+
+/* ── FORMULARIO ── */
+.form-opcional {
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: 0.6;
+}
+
+.form-nota {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--yellow);
+    min-height: 1.3em;
+}
+
+.form-nota--error { color: #ff9c9c; }
+
+/* ── WHATSAPP FLOTANTE ── */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float[hidden] { display: none; }
+.whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1024px) {
+    .whatsapp-float { right: 30px; bottom: 30px; width: 64px; height: 64px; }
+    .whatsapp-float svg { width: 34px; height: 34px; }
+}
+
+/* ── LA DE DIOS REGGAE ── */
+#la-de-dios {
+    --ldd-green: #1e4a26;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(30,74,38,0.12) 0%, transparent 45%),
+        var(--yellow);
+    color: var(--black);
+    position: relative;
+    overflow: hidden;
+}
+
+.ldd-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.ldd-label,
+.ldd-con {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: var(--purple);
+}
+
+.ldd-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 9vw, 8rem);
+    line-height: 0.88;
+    color: var(--purple-dark);
+    margin: 0.6rem 0 0.8rem;
+}
+
+.ldd-title span {
+    display: block;
+    color: var(--ldd-green);
+}
+
+.ldd-card {
+    background: var(--ldd-green);
+    color: var(--yellow);
+    padding: 2.8rem 2.5rem;
+    box-shadow: 14px 14px 0 var(--purple);
+}
+
+.ldd-card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.ldd-card-when {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.6rem, 4.5vw, 3.6rem);
+    line-height: 0.95;
+    margin: 0.5rem 0 1.2rem;
+}
+
+.ldd-card-next {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--white);
+    border-top: 1px solid rgba(239,229,46,0.3);
+    padding-top: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.ldd-btn {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+    background: var(--yellow);
+    padding: 1rem 2rem;
+    transition: all 0.25s;
+}
+.ldd-btn:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .ldd-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media (max-width: 600px) {
+    .ldd-card { padding: 2rem 1.5rem; box-shadow: 8px 8px 0 var(--purple); }
+    .ldd-btn { display: block; text-align: center; }
 }
