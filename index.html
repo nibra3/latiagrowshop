@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacio La Tía | Growshop en Villa Soldati</title>
     <meta name="description" content="Espacio La Tía, growshop en Villa Soldati, Buenos Aires. Semillas, sustratos, iluminación LED, nutrientes, carpas y todo para tu cultivo, con asesoramiento personalizado.">
-    <meta name="theme-color" content="#722784">
+    <meta name="theme-color" content="#57bfc9">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -19,7 +19,9 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -47,37 +49,42 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid-lines"></div>
+    <div class="hero-sun" aria-hidden="true"></div>
+    <svg class="hero-cloud hero-cloud--1" viewBox="0 0 220 90" aria-hidden="true"><path d="M30 78 h160 a28 28 0 0 0 -8 -54 a40 40 0 0 0 -72 -8 a32 32 0 0 0 -56 22 a22 22 0 0 0 -24 40z" fill="#f6e7c8" stroke="#1f1330" stroke-width="5" stroke-linejoin="round"/></svg>
+    <svg class="hero-cloud hero-cloud--2" viewBox="0 0 220 90" aria-hidden="true"><path d="M30 78 h160 a28 28 0 0 0 -8 -54 a40 40 0 0 0 -72 -8 a32 32 0 0 0 -56 22 a22 22 0 0 0 -24 40z" fill="#f6e7c8" stroke="#1f1330" stroke-width="5" stroke-linejoin="round"/></svg>
+    <svg class="hero-birds" viewBox="0 0 120 40" aria-hidden="true"><path d="M5 20 q8 -10 16 0 q8 -10 16 0 M60 8 q6 -8 12 0 q6 -8 12 0 M90 30 q5 -6 10 0 q5 -6 10 0" fill="none" stroke="#1f1330" stroke-width="3.5" stroke-linecap="round"/></svg>
 
-    <!-- Big background logo -->
-    <svg class="hero-logo-big" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="96" fill="#722784"/>
-        <path d="M100 16 C100 16 60 60 60 100 C60 140 100 184 100 184" stroke="#efe52e" stroke-width="4" fill="none"/>
-        <path d="M100 16 C100 16 140 60 140 100 C140 140 100 184 100 184" stroke="#efe52e" stroke-width="4" fill="none"/>
-        <path d="M20 76 Q100 96 180 76" stroke="#efe52e" stroke-width="3" fill="none"/>
-        <path d="M16 124 Q100 104 184 124" stroke="#efe52e" stroke-width="3" fill="none"/>
-        <circle cx="100" cy="100" r="94" stroke="#efe52e" stroke-width="4" fill="none"/>
-    </svg>
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">Growshop · Semillas · Cultivo</div>
+            <h1 class="hero-title">
+                <span class="accent">Espacio</span>
+                <span class="accent-purple">La Tía</span>
+            </h1>
+            <p class="hero-subtitle">Todo lo que necesitás para tu cultivo · Semillas · Sustratos · Equipos</p>
+            <div class="hero-actions">
+                <a href="https://latiagrowshop.empretienda.com.ar/" class="btn-primary">Ver Tienda</a>
+                <a href="#contacto" class="btn-secondary">Consultar</a>
+            </div>
+        </div>
 
-    <div class="hero-content">
-        <div class="hero-badge">Growshop · Semillas · Cultivo</div>
-        <h1 class="hero-title">
-             <span class="accent">ESPACIO</span>
-            <span class="accent-purple">LA TÍA</span>
-        </h1>
-        <p class="hero-subtitle">Todo lo que necesitás para tu cultivo · Semillas · Sustratos · Equipos</p>
-        <div class="hero-actions">
-            <a href="https://latiagrowshop.empretienda.com.ar/" class="btn-primary">Ver Tienda</a>
-            <a href="#contacto" class="btn-secondary">Consultar</a>
+        <div class="hero-seal">
+            <svg class="seal-ring" viewBox="0 0 300 300" aria-hidden="true">
+                <defs><path id="seal-path" d="M150 150 m-118 0 a118 118 0 1 1 236 0 a118 118 0 1 1 -236 0"/></defs>
+                <circle cx="150" cy="150" r="144" fill="#f6e7c8" stroke="#1f1330" stroke-width="6"/>
+                <circle cx="150" cy="150" r="100" fill="none" stroke="#1f1330" stroke-width="5"/>
+                <text font-family="Anton, Impact, sans-serif" font-size="27" fill="#1f1330">
+                    <textPath href="#seal-path" textLength="735" lengthAdjust="spacing">ESPACIO LA TÍA ★ GROWSHOP ★ VILLA SOLDATI ★</textPath>
+                </text>
+            </svg>
+            <img src="img/logo.png" alt="Espacio La Tía" class="seal-logo" width="854" height="800">
+            <span class="seal-sticker">¡Soldati<br>se planta!</span>
         </div>
     </div>
 
-    <div class="hero-scroll">
-        <div class="hero-scroll-line"></div>
-        <span>Scroll</span>
-    </div>
+    <svg class="hero-barrio" viewBox="0 0 1440 330" preserveAspectRatio="xMidYMax slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="112" width="140" height="160" fill="#f6e7c8" stroke="#1f1330" stroke-width="4"/><rect x="-4" y="104" width="148" height="10" fill="#f6e7c8" stroke="#1f1330" stroke-width="4"/><rect x="13" y="134" width="21" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="60" y="134" width="21" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="106" y="134" width="21" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="13" y="168" width="21" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="60" y="168" width="21" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="106" y="168" width="21" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="13" y="202" width="21" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="60" y="202" width="21" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="106" y="202" width="21" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="140" y="57" width="110" height="215" fill="#e8742c" stroke="#1f1330" stroke-width="4"/><rect x="136" y="49" width="118" height="10" fill="#e8742c" stroke="#1f1330" stroke-width="4"/><rect x="155" y="79" width="24" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="210" y="79" width="24" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="155" y="113" width="24" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="210" y="113" width="24" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="155" y="147" width="24" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="210" y="147" width="24" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="155" y="181" width="24" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="210" y="181" width="24" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="155" y="215" width="24" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="210" y="215" width="24" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="250" y="144" width="160" height="128" fill="#9b3bb0" stroke="#1f1330" stroke-width="4"/><rect x="246" y="136" width="168" height="10" fill="#9b3bb0" stroke="#1f1330" stroke-width="4"/><rect x="265" y="166" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="318" y="166" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="372" y="166" width="23" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="265" y="200" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="318" y="200" width="23" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="372" y="200" width="23" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="410" y="84" width="120" height="188" fill="#f2b634" stroke="#1f1330" stroke-width="4"/><rect x="406" y="76" width="128" height="10" fill="#f2b634" stroke="#1f1330" stroke-width="4"/><rect x="427" y="106" width="26" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="487" y="106" width="26" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="427" y="140" width="26" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="487" y="140" width="26" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="427" y="174" width="26" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="487" y="174" width="26" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="427" y="208" width="26" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="487" y="208" width="26" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="530" y="166" width="90" height="106" fill="#57bfc9" stroke="#1f1330" stroke-width="4"/><rect x="526" y="158" width="98" height="10" fill="#57bfc9" stroke="#1f1330" stroke-width="4"/><rect x="543" y="188" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="588" y="188" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="543" y="222" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="588" y="222" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="870" y="62" width="130" height="210" fill="#2f8f9d" stroke="#1f1330" stroke-width="4"/><rect x="866" y="54" width="138" height="10" fill="#2f8f9d" stroke="#1f1330" stroke-width="4"/><rect x="888" y="84" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="953" y="84" width="29" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="888" y="118" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="953" y="118" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="888" y="152" width="29" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="953" y="152" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="888" y="186" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="953" y="186" width="29" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="888" y="220" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="953" y="220" width="29" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1000" y="134" width="150" height="138" fill="#e8742c" stroke="#1f1330" stroke-width="4"/><rect x="996" y="126" width="158" height="10" fill="#e8742c" stroke="#1f1330" stroke-width="4"/><rect x="1014" y="156" width="22" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1064" y="156" width="22" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1114" y="156" width="22" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1014" y="190" width="22" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1064" y="190" width="22" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1114" y="190" width="22" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1014" y="224" width="22" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1064" y="224" width="22" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1114" y="224" width="22" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1150" y="34" width="105" height="238" fill="#f6e7c8" stroke="#1f1330" stroke-width="4"/><rect x="1146" y="26" width="113" height="10" fill="#f6e7c8" stroke="#1f1330" stroke-width="4"/><rect x="1165" y="56" width="23" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1217" y="56" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1165" y="90" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1217" y="90" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1165" y="124" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1217" y="124" width="23" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1165" y="158" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1217" y="158" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1165" y="192" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1217" y="192" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1165" y="226" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1217" y="226" width="23" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1255" y="104" width="185" height="168" fill="#9b3bb0" stroke="#1f1330" stroke-width="4"/><rect x="1251" y="96" width="193" height="10" fill="#9b3bb0" stroke="#1f1330" stroke-width="4"/><rect x="1268" y="126" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1314" y="126" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1360" y="126" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1407" y="126" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1268" y="160" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1314" y="160" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1360" y="160" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1407" y="160" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1268" y="194" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1314" y="194" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1360" y="194" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1407" y="194" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="1268" y="228" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1314" y="228" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1360" y="228" width="20" height="20" rx="3" fill="#efe52e" stroke="#1f1330" stroke-width="3"/><rect x="1407" y="228" width="20" height="20" rx="3" fill="#2b1d44" stroke="#1f1330" stroke-width="3"/><rect x="466" y="62" width="8" height="16" fill="#1f1330"/><rect x="448" y="28" width="44" height="36" rx="6" fill="#e9e3d6" stroke="#1f1330" stroke-width="4"/><ellipse cx="470" cy="28" rx="22" ry="6" fill="#d3cbbb" stroke="#1f1330" stroke-width="4"/><rect x="1336" y="82" width="8" height="16" fill="#1f1330"/><rect x="1318" y="48" width="44" height="36" rx="6" fill="#e9e3d6" stroke="#1f1330" stroke-width="4"/><ellipse cx="1340" cy="48" rx="22" ry="6" fill="#d3cbbb" stroke="#1f1330" stroke-width="4"/><rect x="56" y="90" width="8" height="16" fill="#1f1330"/><rect x="38" y="56" width="44" height="36" rx="6" fill="#e9e3d6" stroke="#1f1330" stroke-width="4"/><ellipse cx="60" cy="56" rx="22" ry="6" fill="#d3cbbb" stroke="#1f1330" stroke-width="4"/><path d="M1200 26 v-50 M1186 -10 h28 M1190 2 h20" stroke="#1f1330" stroke-width="4" stroke-linecap="round"/><path d="M290 112 q -20 -20 -36 -34 q 6 19 36 34z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M290 112 q -8 -26 -14 -44 q 2 24 14 44z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M290 112 q 5 -28 9 -46 q -2 25 -9 46z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M290 112 q 18 -22 32 -36 q -5 20 -32 36z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M290 112 q -31 -14 -56 -24 q 9 13 56 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M290 112 q 29 -14 52 -24 q -9 13 -52 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M272.0 110 h36.0 l-5 26.0 h-26.0z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><path d="M370 112 q -20 -20 -36 -34 q 6 19 36 34z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M370 112 q -8 -26 -14 -44 q 2 24 14 44z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M370 112 q 5 -28 9 -46 q -2 25 -9 46z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M370 112 q 18 -22 32 -36 q -5 20 -32 36z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M370 112 q -31 -14 -56 -24 q 9 13 56 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M370 112 q 29 -14 52 -24 q -9 13 -52 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M352.0 110 h36.0 l-5 26.0 h-26.0z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><path d="M1050 102 q -20 -20 -36 -34 q 6 19 36 34z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1050 102 q -8 -26 -14 -44 q 2 24 14 44z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1050 102 q 5 -28 9 -46 q -2 25 -9 46z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1050 102 q 18 -22 32 -36 q -5 20 -32 36z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1050 102 q -31 -14 -56 -24 q 9 13 56 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1050 102 q 29 -14 52 -24 q -9 13 -52 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1032.0 100 h36.0 l-5 26.0 h-26.0z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><path d="M1110 102 q -20 -20 -36 -34 q 6 19 36 34z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1110 102 q -8 -26 -14 -44 q 2 24 14 44z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1110 102 q 5 -28 9 -46 q -2 25 -9 46z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1110 102 q 18 -22 32 -36 q -5 20 -32 36z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1110 102 q -31 -14 -56 -24 q 9 13 56 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1110 102 q 29 -14 52 -24 q -9 13 -52 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1092.0 100 h36.0 l-5 26.0 h-26.0z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><path d="M1290 72 q -20 -20 -36 -34 q 6 19 36 34z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1290 72 q -8 -26 -14 -44 q 2 24 14 44z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1290 72 q 5 -28 9 -46 q -2 25 -9 46z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1290 72 q 18 -22 32 -36 q -5 20 -32 36z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1290 72 q -31 -14 -56 -24 q 9 13 56 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1290 72 q 29 -14 52 -24 q -9 13 -52 24z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M1272.0 70 h36.0 l-5 26.0 h-26.0z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><rect x="620" y="112" width="250" height="160" fill="#f6e7c8" stroke="#1f1330" stroke-width="4"/><rect x="638" y="126" width="214" height="40" rx="8" fill="#722784" stroke="#1f1330" stroke-width="4"/><text x="745.0" y="156" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="27" textLength="190" lengthAdjust="spacingAndGlyphs" fill="#efe52e">ESPACIO LA TÍA</text><path d="M612.0 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#722784" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M645.2 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#efe52e" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M678.5 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#722784" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M711.8 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#efe52e" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M745.0 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#722784" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M778.2 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#efe52e" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M811.5 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#722784" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M844.8 174 h33.2 v22 q-16.6 14 -33.2 0z" fill="#efe52e" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><rect x="650" y="210" width="90" height="62" fill="#57bfc9" stroke="#1f1330" stroke-width="4"/><rect x="770" y="210" width="62" height="62" fill="#2b1d44" stroke="#1f1330" stroke-width="4"/><circle cx="820" cy="242" r="4" fill="#efe52e"/><path d="M635 262 q -24 -24 -43 -41 q 7 22 43 41z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M635 262 q -9 -32 -16 -53 q 3 29 16 53z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M635 262 q 6 -33 11 -55 q -2 30 -11 55z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M635 262 q 21 -26 38 -43 q -6 24 -38 43z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M635 262 q -37 -17 -67 -29 q 11 16 67 29z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M635 262 q 35 -17 63 -29 q -10 16 -63 29z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M613.4 260 h43.199999999999996 l-5 31.2 h-31.2z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><path d="M858 262 q -24 -24 -43 -41 q 7 22 43 41z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M858 262 q -9 -32 -16 -53 q 3 29 16 53z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M858 262 q 6 -33 11 -55 q -2 30 -11 55z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M858 262 q 21 -26 38 -43 q -6 24 -38 43z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M858 262 q -37 -17 -67 -29 q 11 16 67 29z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M858 262 q 35 -17 63 -29 q -10 16 -63 29z" fill="#5e9b3a" stroke="#1f1330" stroke-width="3" stroke-linejoin="round"/><path d="M836.4 260 h43.199999999999996 l-5 31.2 h-31.2z" fill="#c8602b" stroke="#1f1330" stroke-width="4" stroke-linejoin="round"/><path d="M0 266 Q 120 252 240 266 T 480 266 T 720 266 T 960 266 T 1200 266 T 1440 266 V 330 H0Z" fill="#5e9b3a" stroke="#1f1330" stroke-width="4"/><path d="M0 292 H1440 V330 H0Z" fill="#3f7a2a"/></svg>
 </section>
+
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
@@ -99,61 +106,21 @@
     </div>
 </div>
 
-<!-- CATEGORIES -->
-<section id="categorias">
-    <div class="container">
-        <p class="section-label">Explorá el catálogo</p>
-        <h2 class="section-title">Categorías</h2>
-    </div>
-    <div class="cat-grid">
-        <a href="https://latiagrowshop.empretienda.com.ar/semillas" class="cat-item">
-            <div class="cat-icon">🌱</div>
-            <div class="cat-name">Semillas</div>
-            <div class="cat-desc">Genéticas premium, feminizadas y automáticas de los mejores bancos del mundo.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="https://latiagrowshop.empretienda.com.ar/fertilizantes" class="cat-item">
-            <div class="cat-icon">🌲</div>
-            <div class="cat-name">Sustratos</div>
-            <div class="cat-desc">Tierra, coco, perlita y mezclas profesionales para cualquier sistema de cultivo.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="#" class="cat-item">
-            <div class="cat-icon">💡</div>
-            <div class="cat-name">Iluminación</div>
-            <div class="cat-desc">LEDs de última generación, CDM, HPS y CMH para el máximo rendimiento.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="#" class="cat-item">
-            <div class="cat-icon">🧪</div>
-            <div class="cat-name">Nutrición</div>
-            <div class="cat-desc">Fertilizantes base, estimuladores, raíces, y correctores de pH y EC.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="#" class="cat-item">
-            <div class="cat-icon">🌡️</div>
-            <div class="cat-name">Clima</div>
-            <div class="cat-desc">Extractores, ventiladores, carbones y sistemas de control ambiental.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="#" class="cat-item">
-            <div class="cat-icon">⚗️</div>
-            <div class="cat-name">Hidroponía</div>
-            <div class="cat-desc">Sistemas DWC, NFT, Aero y todos los accesorios para cultivo sin tierra.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="#" class="cat-item">
-            <div class="cat-icon">🎒</div>
-            <div class="cat-name">Carpas y Grow Tents</div>
-            <div class="cat-desc">Carpas de cultivo de todos los tamaños, reflectivas y herméticas.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
-        <a href="#" class="cat-item">
-            <div class="cat-icon">🔬</div>
-            <div class="cat-name">Medición</div>
-            <div class="cat-desc">Medidores pH, EC, termohigrómetros y microscopios de tricomas.</div>
-            <div class="cat-arrow">Ver Catálogo →</div>
-        </a>
+<!-- LA DE DIOS REGGAE -->
+<section id="la-de-dios">
+    <div class="container ldd-grid">
+        <div class="ldd-text">
+            <p class="ldd-label">Conectamos lo que suena</p>
+            <h2 class="ldd-title">La de Dios <span>Reggae</span></h2>
+            <p class="ldd-con">con lo que necesitás saber.</p>
+        </div>
+
+        <div class="ldd-card">
+            <p class="ldd-card-label">Escuchanos el</p>
+            <p class="ldd-card-when">Último martes<br>de cada mes</p>
+            <p class="ldd-card-next" id="ldd-proxima" hidden></p>
+            <a href="https://ladedios.com.ar/" class="ldd-btn" target="_blank" rel="noopener">Escuchanos acá →</a>
+        </div>
     </div>
 </section>
 
@@ -245,21 +212,61 @@
     </div>
 </section>
 
-<!-- LA DE DIOS REGGAE -->
-<section id="la-de-dios">
-    <div class="container ldd-grid">
-        <div class="ldd-text">
-            <p class="ldd-label">Conectamos lo que suena</p>
-            <h2 class="ldd-title">La de Dios <span>Reggae</span></h2>
-            <p class="ldd-con">con lo que necesitás saber.</p>
-        </div>
-
-        <div class="ldd-card">
-            <p class="ldd-card-label">Escuchanos el</p>
-            <p class="ldd-card-when">Último martes<br>de cada mes</p>
-            <p class="ldd-card-next" id="ldd-proxima" hidden></p>
-            <a href="https://ladedios.com.ar/" class="ldd-btn" target="_blank" rel="noopener">Escuchanos acá →</a>
-        </div>
+<!-- CATEGORIES -->
+<section id="categorias">
+    <div class="container">
+        <p class="section-label">Explorá el catálogo</p>
+        <h2 class="section-title">Categorías</h2>
+    </div>
+    <div class="cat-grid">
+        <a href="https://latiagrowshop.empretienda.com.ar/semillas" class="cat-item">
+            <div class="cat-icon">🌱</div>
+            <div class="cat-name">Semillas</div>
+            <div class="cat-desc">Genéticas premium, feminizadas y automáticas de los mejores bancos del mundo.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="https://latiagrowshop.empretienda.com.ar/fertilizantes" class="cat-item">
+            <div class="cat-icon">🌲</div>
+            <div class="cat-name">Sustratos</div>
+            <div class="cat-desc">Tierra, coco, perlita y mezclas profesionales para cualquier sistema de cultivo.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="#" class="cat-item">
+            <div class="cat-icon">💡</div>
+            <div class="cat-name">Iluminación</div>
+            <div class="cat-desc">LEDs de última generación, CDM, HPS y CMH para el máximo rendimiento.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="#" class="cat-item">
+            <div class="cat-icon">🧪</div>
+            <div class="cat-name">Nutrición</div>
+            <div class="cat-desc">Fertilizantes base, estimuladores, raíces, y correctores de pH y EC.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="#" class="cat-item">
+            <div class="cat-icon">🌡️</div>
+            <div class="cat-name">Clima</div>
+            <div class="cat-desc">Extractores, ventiladores, carbones y sistemas de control ambiental.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="#" class="cat-item">
+            <div class="cat-icon">⚗️</div>
+            <div class="cat-name">Hidroponía</div>
+            <div class="cat-desc">Sistemas DWC, NFT, Aero y todos los accesorios para cultivo sin tierra.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="#" class="cat-item">
+            <div class="cat-icon">🎒</div>
+            <div class="cat-name">Carpas y Grow Tents</div>
+            <div class="cat-desc">Carpas de cultivo de todos los tamaños, reflectivas y herméticas.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
+        <a href="#" class="cat-item">
+            <div class="cat-icon">🔬</div>
+            <div class="cat-name">Medición</div>
+            <div class="cat-desc">Medidores pH, EC, termohigrómetros y microscopios de tricomas.</div>
+            <div class="cat-arrow">Ver Catálogo →</div>
+        </a>
     </div>
 </section>
 
@@ -392,9 +399,9 @@
     <div class="footer-logo">Espacio La Tía</div>
     <div class="footer-links">
         <a href="#">Inicio</a>
-        <a href="#categorias">Categorías</a>
-        <a href="#productos">Productos</a>
         <a href="#la-de-dios">La de Dios</a>
+        <a href="#productos">Productos</a>
+        <a href="#categorias">Categorías</a>
         <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
     </div>
