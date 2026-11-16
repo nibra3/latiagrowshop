@@ -213,6 +213,7 @@ nav a:hover { background: var(--yellow); border-color: var(--ink); }
     position: absolute;
     width: clamp(120px, 14vw, 220px);
     z-index: 1;
+    overflow: visible;
     animation: drift 40s linear infinite alternate;
 }
 .hero-cloud--1 { top: 9%; left: 40%; }
@@ -335,8 +336,17 @@ nav a:hover { background: var(--yellow); border-color: var(--ink); }
     inset: 0;
     width: 100%;
     height: 100%;
-    filter: drop-shadow(8px 8px 0 var(--ink));
     animation: spin 40s linear infinite;
+}
+
+/* Sombra del sello: círculo fijo, no gira con el anillo */
+.hero-seal::before {
+    content: '';
+    position: absolute;
+    inset: 1%;
+    border-radius: 50%;
+    background: var(--ink);
+    transform: translate(8px, 8px);
 }
 
 .seal-logo {
@@ -1068,6 +1078,9 @@ a:focus-visible, button:focus-visible {
     .hero-actions { flex-direction: column; align-items: stretch; }
     .hero-actions a { text-align: center; }
     .hero-birds { display: none; }
+    .hero-cloud { animation-duration: 25s; }
+    .hero-cloud--1 { top: 160px; left: auto; right: -24px; width: 90px; }
+    .hero-cloud--2 { top: auto; bottom: 46%; right: -26px; width: 92px; }
     .seal-sticker { right: -10%; }
     .section-title { text-shadow: 2px 2px 0 var(--ink), 4px 4px 0 var(--ink); }
     .cat-grid { grid-template-columns: 1fr; gap: 1.2rem; }
